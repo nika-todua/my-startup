@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
+@import "tailwindcss";
+
+.font{
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7e7e7e;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.2s linear;
+    z-index: 998;
+
+    &.headerActive{
+        background-color: #0e0e0e;
+    }
+}
+main{
+    position: relative;
+    width: 100%;
+    height: auto;
+}

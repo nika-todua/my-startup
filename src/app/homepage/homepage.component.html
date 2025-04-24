@@ -1,0 +1,129 @@
+<section class="homepage_inner relative">
+
+    <section class="homepage_inner__hero_cont relative w-full flex justify-center items-center overflow-hidden" *ngIf="true">
+        <img src="../../../assets/image/163302763816327698011632602616Consult_header-10.webp" loading="lazy" alt="hero section image"
+        class="absolute w-full h-full pointer-events-none select-none object-cover object-bottom-right sm:object-[80%_100%] lg:object-center" />
+        
+        <div class="homepage_inner__hero_cont_text-cont absolute w-[80%] z-10">
+            <h1 class="font text-4xl sm:text-5xl lg:text-6xl text-white">საიტის დამზადება <br> <span>{{webname}}</span> </h1>
+            <p class="font text-sm text-white mt-3 max-w-[600px]">
+                ეძებ <span>ვებ დეველოპერს</span>? {{webname}}-ი სწორი არჩევანია, რომელსაც შენ ეძებ! მე ვარ გუნდის წევრი,
+                რომელსაც აქვს მრავალწლიანი გამოცდილება და შემიძლია თავი გავართვა ნებისმიერი სირთულის პროექტს. გააკეთე სწორი არჩევანი, იმოქმედე ჩემთან ერთად და ერთად გავხდეთ წარმატებულები!
+            </p>
+        </div>
+
+        <div class="bottom-5 scrolldown overflow-hidden pointer cursor-pointer absolute z-10" (click)="scrollDown()">
+
+            <div class="scrollDown-cont relative pointer-events-none flex justify-center items-center">
+                <div class="scroller pointer-events-none absolute"></div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+    <section class="homepage_inner__services_price_cont relative w-full flex justify-center items-center" *ngIf="true">
+
+        <div class="homepage_inner__services_price_cont_inner">
+
+            <p class="homepage_inner__services_price_cont_inner_query_title font">თქვენს ბიზნესზე მორგებული პაკეტები</p>
+            <h2 class="homepage_inner__services_price_cont_inner_section_title font mt-3">საიტის დამზადება, სეო და სოც. მენეჯმენტი</h2>
+
+
+            <div class="card_cont relative mt-6 flex flex-wrap justify-center items-center gap-5">
+
+                <div class="card_item" *ngFor="let item of priceArray">
+                    <div class="card_item_inner flex flex-col">
+                        <h3 class="card_title font">{{item.title}}</h3>
+                        <p class="card_price font mt-4">{{item.price}}&#8382;<span>{{item.Late}}</span></p>
+                        <button class="card_btn mt-10 rounded-sm cursor-pointer overflow-hidden flex font">
+                            <a [routerLink]="item.link" rel="follow" class="flex justify-center items-center">პაკეტები</a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+
+    </section>
+    
+    <section class="homepage_inner__about relative flex justify-center items-center" *ngIf="true">
+        <div class="homepage_inner__about_inner flex justify-center items-center gap-3">
+
+            <aside class="images_cont relative flex justify-end items-center">
+                <div class="images_cont_inner relative grid grid-cols-2 justify-end items-center flex-wrap gap-5">
+                    <div class="image1 about-image"><img [src]="image1" loading="lazy" alt="about image" class="select-none pointer-events-none"></div>
+                    <div class="image2 about-image"><img [src]="image1" loading="lazy" alt="about image" class="select-none pointer-events-none"></div>
+                    <div class="image3 about-image"><img [src]="image1" loading="lazy" alt="about image" class="select-none pointer-events-none"></div>
+                </div>
+            </aside>
+            
+            <aside class="text-cont relative">
+                <h3 class="about_sec_title font">ჩვენ გვჯერა მარტივი<br> <span>მაგრამ ეფექტური გადაწყვეტილებების!</span></h3>
+                <p class="font mt-4 text1">
+                    {{webname}}-ის გუნდი, შეიქმა ერთი მიზნის მისაღწევად: დაგეხმაროთ თქვენი ბიზნესის განვითარებაში!
+                    ჩვენ გთავაზობთ უნიკალურ მომსახურებას, რომლებიც აერთიანებს წარმატებული ბიზნესის განვითარებისთვის აუცილებელ ციფრულ სერვისებს.
+                </p>
+                <ul class="mt-4 text-sm ml-6 flex flex-col gap-2 list-disc">
+                    <li class="font">უნიკალური დიზაინის მქონე, კარგად აღქმადი, გამორჩეული, დასამახსოვრებელი, პოზიტიური ასოციაციების მქონე ვებგვერდის შექმნა</li>
+                    <li class="font">კრეატიული, ინფორმაციული, ეფექტური და ინოვაციური სარეკლამო ტექსტების  მომზადება</li>
+                    <li class="font">Ბიზნესის პოპულარიზაცია, Google-ში მოწინავე პოზიციების მოპოვება, საძიებო სისტემების ოპტიმიზაცია (SEO)</li>
+                </ul>
+                <button class="about-BTN font mt-5 rounded-sm overflow-hidden">
+                    <a routerLink="/pricing" rel="follow" class="w-full h-full flex justify-center items-center">მიიღე შეთავაზება</a>
+                </button>
+            </aside>
+            
+        </div>
+    </section>
+
+    <section class="homepage_inner__services_section relative flex justify-center items-start" *ngIf="true">
+        <div class="homepage_inner__services_section_inner relative pb-10 pt-3">
+            <h3 class="section_title font">რა შეგვიძლია?</h3>
+            <p class="services_text font mx-auto mt-3">ჩვენი სერვისების დახმარებით, შეძლებთ უკეთ პოზიციონირდეთ ბაზარზე, გახდეთ ხელმისაწვდომი და კონკურენტუნარიანი, ეფექტური და ინოვაციური სერვისების გამოყენებით.</p>
+
+            <div class="services_card_cont w-full flex justify-center items-center gap-5 mt-7 flex-wrap">
+
+                <div class="services_card_cont_item relative rounded-2xl overflow-hidden" *ngFor="let item of servicesArray">
+                    <div class="card-image-dark absolute w-full pointer-events-none"></div>
+                    <div class="card_image-box w-full pointer-events-none"><img [src]="item.image" class="w-full object-center flex pointer-events-none select-none" loading="lazy" alt="card image"></div>
+                    <div class="icon_image_box absolute z-10 top-17 w-full flex justify-center items-center pointer-events-none">
+                        <img [src]="item.icon" class="select-none" width="auto" height="48" alt="icon"></div>
+                    <div class="card_text-cont w-full flex flex-col justify-start items-center absolute top-37">
+                        <h3 class="card_title font">{{item.title}}</h3>
+                        <p class="card_text font mt-5 text-center">{{item.description}}</p>
+                        <button class="card_btn font absolute bottom-0">
+                            <a routerLink="{{item.link}}" rel="follow" class="w-full h-full flex justify-center items-center py-2 px-3">გაიგე მეტი</a>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="homepage_inner__fun-facts_section relative flex justify-center items-start">
+        <div class="homepage_inner__fun-facts_section_inner relative pb-19 pt-3">
+            <h3 class="section_title font">დაგვიკავშირდით</h3>
+            <p class="services_text font mx-auto mt-3">{{webname}}-ის გუნდი, მზადაა გაგიწიოთ კონსულტაცია სრულიად უფასოდ!</p>
+
+            <div class="contentBox relative flex justify-center items-center gap-5 mt-13 flex-wrap">
+                <aside class="leftCont relative flex flex-col justify-center items-center">
+                    <h4 class="font">ეძებთ <span>ვებ დეველოპერს?</span></h4>
+                    <p class="font">დაგვიკავშირდი და მიიღე ამომწურავი ინფორმაცია</p>
+                    <button class="font rounded-sm overflow-hidden"><a routerLink="/contact" rel="follow" class="font flex justify-center items-center">კონტაქტი</a></button>
+                </aside>
+                <aside class="rightCont relative flex flex-col justify-center items-center">
+                    <img src="https://webnet.ge/public/images/media/1704985721help.png" width="540px" height="auto" loading="lazy" alt="fun fact image" class="select-none pointer-events-none object-cover object-center" />
+                </aside>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+</section>

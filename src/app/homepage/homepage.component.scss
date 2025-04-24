@@ -1,0 +1,385 @@
+.homepage_inner{
+  width: 100%;
+  min-height: 800px;
+  background-color: green;
+
+  &__hero_cont{
+    height: 991px;
+    min-height: 500px;
+    
+    &_text-cont{
+      max-width: 1150px;
+      h1{
+        font-weight: 700 !important;
+        line-height: 120%;
+        span{
+          color: transparent !important;
+          -webkit-text-stroke: 3px white;
+        }
+      }
+    }
+    .scrolldown{
+      border-radius: 15px;
+      transform: scale(0.8);
+      .scrollDown-cont{
+        width: 30px;
+        height: 60px;
+        border: 3px solid #fff;
+        border-radius: 15px;
+        .scroller{
+          width: 16px;
+          border-radius: 8px;
+          background-color: #fff;
+          top: 4px;
+          left: 4px;
+          bottom: 34px;
+          animation: scroller 1500ms ease-out infinite;
+        }
+      }
+    }
+  }
+
+  &__services_price_cont{
+    width: 100%;
+    height: auto;
+    background-color: rgb(238, 238, 238);
+
+    &_inner{
+      padding-top: 25px;
+      padding-bottom: 40px;
+      width: 90%;
+      height: 100%;
+      
+      &_query_title{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+        color: #000000;
+      }
+      &_section_title{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 120%;
+
+        color: #ffd813;
+        -webkit-text-stroke: 1px rgb(0, 0, 0);
+      }
+      .card_cont{
+        padding-top: 7px;
+        padding-bottom: 2px;
+        width: 100%;
+        height: auto;
+        
+        .card_item{
+          width: 263.5px;
+          height: 280px;
+          border-radius: 16px;
+          border: 5px solid #1d1d1d;
+          box-shadow: 2px 2px 0px #1d1d1d;
+          background-color: #fff;
+          display: flex;
+          padding: 24px;
+          transition: all 0.2s ease-in-out;
+          
+          &:hover{
+            transform: translate(-5px, -5px);
+            box-shadow: 7px 7px 0px #1d1d1d;
+          }
+          
+          &_inner{
+            width: 100%;
+            height: 100%;
+            
+            .card_title{
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 120%;
+              color: #000000;
+            }
+            .card_price{
+              font-size: 38px;
+              font-weight: 700;
+              span{
+                margin-left: 4px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #000000;
+              }
+            }
+            .card_btn{
+              width: 100%;
+              height: 50px;
+              background-color: #000000;
+
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 120%;
+              color: #ffffff;
+
+              a{
+                width: 100%;
+                height: 100%;;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &__about{
+    width: 100%;
+    min-height: 650px;
+    background-color: white;
+    &_inner{
+      width: 90%;
+      height: auto;
+
+      .images_cont{
+        width: 50%;
+        max-width: 540px;
+        min-width: 345.594px;
+        height: 100%;
+        
+        &_inner{
+          width: auto;
+          height: auto;
+
+          .about-image{
+            aspect-ratio: 1/1;
+            border-radius: 8px;
+            overflow: hidden;
+            &.image1{
+              max-width: calc(100% - 21px);
+            }
+            &.image2{
+              max-width: calc(100% - 3px);
+            }
+            &.image3{
+              max-width: calc(100% - 45px);
+            }
+            img{
+              
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      .text-cont{
+        max-width: 604.625px;
+        width: 55%;
+        height: 100%;
+        
+        .about_sec_title{
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 125%;
+          color: #000000;
+          span{
+            color: transparent;
+            -webkit-text-stroke: 1px rgb(0, 0, 0);
+          }
+        }
+        .text1{
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          color: #000000;
+        }
+        .about-BTN{
+          max-width: 177px;
+          width: 100%;
+          height: 50px;
+          background-color: #000000;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 120%;
+          color: #ffffff;
+        }
+
+        
+      }
+    }
+  }
+
+  &__services_section{
+    width: 100%;
+    height: auto;
+    min-height: 650px;
+    background-color: #0e0e0e;
+
+    &_inner{
+      width: 90%;
+      height: 100%;
+      .section_title{
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+      }
+      .services_text{
+        max-width: 625px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+      }
+      .services_card_cont{
+        height: auto;
+        &_item{
+          width: 356.656px;
+          height: 557px;
+          background-color: #242424;
+          .card-image-dark{
+            height: 60%;
+            background-color: rgb(36 36 36 / 45%);
+          }
+          .icon_image_box{
+            height: 48px;
+            img{
+              height: 100%;
+            }
+          }
+          .card_text-cont{
+            height: 362px;
+            background: linear-gradient(#00000000 0%, #242424 12%);
+            .card_title{
+              max-width: 272.656px;
+              text-align: center;
+              font-size: 20px;
+              font-weight: 700;
+              color: #fff;
+            }
+            .card_text{
+              max-width: 272px;
+              font-size: 14px;
+              font-weight: 400;
+              color: #fff;
+            }
+            .card_btn{
+              a{
+                position: relative;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+
+                &::after{
+                  content: " ";
+                  position: absolute;
+                  bottom: -1px;
+                  display: block;
+                  width: 78%;
+                  height: 2px;
+                  background-color: #fff;
+                  transform: scaleX(1);
+                  transition: transform 0.2s linear;
+                }
+                &:hover::after{
+                  transform: scaleX(0);
+                }
+
+                
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+
+  &__fun-facts_section{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    &_inner{
+      width: 90%;
+      height: 100%;
+
+      .section_title{
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        color: #000000;
+      }
+      .services_text{
+        max-width: 660px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000000;
+      }
+      .contentBox{
+        width: 100%;
+
+        .leftCont{
+          max-width: 560px;
+          width: 50%;
+
+          h4{
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 120%;
+            color: #000000;
+          }
+          p{
+            margin-top: 9px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            color: #000000;
+          }
+          button{
+            margin-top: 15px;
+            width: 100%;
+            height: 50px;
+            max-width: 177px;
+            background-color: #000000;
+            a{
+              width: 100%;
+              height: 100%;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 120%;
+              color: #ffffff;
+            }
+          }
+        }
+        .rightCont{
+          max-width: 540px;
+          width: 47%;
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  
+}
+@keyframes scroller{
+    0%{
+      bottom: 34px;
+    }
+    5%{
+      top: 4px;
+    }
+    32%{    
+      bottom: 4px;
+    }
+    66%{
+      top: 34px;
+      bottom: 4px;
+    }
+    100%{
+      top: 4px;
+      bottom: 34px;
+    }
+  }
