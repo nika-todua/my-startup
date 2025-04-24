@@ -61,4 +61,27 @@ export class HomepageComponent {
     }
   ]
 
+  // project section functions
+  
+  projectArray:any = [
+    {
+      title: 'პროექტის სახელი',
+      tecnology: 'angular',
+      image: 'https://img.freepik.com/premium-vector/project-management-word-concepts-dark-blue-banner_106317-28462.jpg',
+      link: ''
+    },
+    {
+      title: 'პროექტის სახელი',
+      tecnology: 'angular',
+      image: 'https://img.freepik.com/premium-vector/project-management-word-concepts-dark-blue-banner_106317-28462.jpg',
+      link: ''
+    },
+    {
+      title: 'პროექტის სახელი',
+      tecnology: 'angular',
+      image: 'https://img.freepik.com/premium-vector/project-management-word-concepts-dark-blue-banner_106317-28462.jpg',
+      link: ''
+    }
+  ]
+
 }

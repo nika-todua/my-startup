@@ -106,7 +106,7 @@
         </div>
     </section>
     
-    <section class="homepage_inner__fun-facts_section relative flex justify-center items-start">
+    <section class="homepage_inner__fun-facts_section relative flex justify-center items-start" *ngIf="true">
         <div class="homepage_inner__fun-facts_section_inner relative pb-19 pt-3">
             <h3 class="section_title font">დაგვიკავშირდით</h3>
             <p class="services_text font mx-auto mt-3">{{webname}}-ის გუნდი, მზადაა გაგიწიოთ კონსულტაცია სრულიად უფასოდ!</p>
@@ -121,6 +121,34 @@
                     <img src="https://webnet.ge/public/images/media/1704985721help.png" width="540px" height="auto" loading="lazy" alt="fun fact image" class="select-none pointer-events-none object-cover object-center" />
                 </aside>
             </div>
+            
+        </div>
+    </section>
+    
+    <section class="homepage_inner__project-section relative flex justify-center items-start">
+        <div class="homepage_inner__project-section-inner relative pb-18 pt-4">
+            <p class="services_text font mx-auto">დასრულებული ნამუშევრები</p>
+            <h3 class="section_title font">ჩვენი <span>გამორჩეული</span> პროექტები.</h3>
+
+            <div class="project_card_cont relative w-full flex justify-center items-center gap-5 mt-7 flex-wrap">
+
+                <div class="project_card_cont_item relative rounded-2xl" *ngFor="let item of projectArray; let i = index">
+                    <div class="card_image relative rounded-2xl overflow-hidden"><img class="w-full h-full object-cover pointer-events-none select-none" [src]="item.image" loading="lazy" alt="project image banner"></div>
+
+                    <div class="card_desc relative flex flex-col justify-start items-start mt-5">
+                        <p class="projectID font"><span class="pointer-events-none"><span *ngIf="i < 9">0</span><span>{{i + 1}}</span></span></p>
+                        <h2 class="font card_title">{{item.title}}</h2>
+                        <p class="project-category font">ტექნოლოგია: {{item.tecnology}}</p>
+                        <a routerLink="{{item.link}}" rel="follow" class="font cardBtn flex">დათვალიერება
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" class="flex ml-2" fill="#ffffff"
+                            style="position: absolute; position: relative; bottom: -4.5px;"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
             
         </div>
     </section>
