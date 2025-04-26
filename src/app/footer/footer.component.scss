@@ -1,0 +1,60 @@
+.footer_inner{
+
+    &_left-content{
+        background-color: #141414;
+        width: 50%;
+        height: 410.984px;
+
+        .inner{
+            .top_text{
+                font-size: 18px;
+                font-weight: 500;
+                color: white;
+            }
+            .text{
+                max-width: 365px;
+                font-style: italic;
+                font-size: 20px;
+                font-weight: 400;
+                color: white;
+            }
+            .contact_btn{
+                background-color: white;
+                color: black;
+                font-size: 16px;
+                font-weight: 700;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        
+    }
+    &_right-content{
+        background-color: #0f0f0f;
+        width: 50%;
+        height: 410.984px;
+        .cont_box{
+            width: fit-content;
+            ul{
+                
+                p{
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: white;
+                }
+                li{
+                    a{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .booto-text{
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
