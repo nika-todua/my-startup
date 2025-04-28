@@ -1,18 +1,18 @@
-<div class="header_inner relative mx-auto flex items-center justify-between">
-    <a routerLink="/" class="header_inner_logo font relative flex overflow-hidden aspect-square">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/886/451/small_2x/website-settings-glyph-circle-background-icon-vector.jpg" loading="lazy" alt="web logo"
-             class="pointer-events-none select-none">
+<div class="relative flex items-center justify-between mx-auto header_inner">
+    <a routerLink="/" class="relative flex overflow-hidden header_inner_logo font aspect-square">
+        <img [src]="imglogo" loading="lazy" alt="web logo" class="pointer-events-none select-none">
     </a>
 
-
-    <nav>
+    <nav class="{{toggleclass}}">
         <ul class="flex items-center gap-4 font">
-            <li><a routerLink="" rel="nofollow">მთავარი</a></li>
-            <li><a routerLink="about-us" rel="nofollow">ჩვენ შესახებ</a></li>
-            <li><a routerLink="portfolio" rel="nofollow">ნამუშევრები</a></li>
-            <li><a routerLink="pricing" rel="nofollow">ფასები</a></li>
-            <li><a routerLink="services" rel="nofollow">სერვისები</a></li>
+            <li *ngFor="let item of navigationlinkArray"> <a [routerLink]="item.link" rel="follow" (click)="closeMenu()">{{ item.name }}</a> </li>
         </ul>
     </nav>
-    
+
+    <button class="toggle_btn {{toggleclass}}" (click)="toggleMenu()">
+        <span class="toggle_btn_line" *ngFor="let i of ['','','']"></span>
+    </button>
+
+
+    <div class="nav-blur {{toggleclass}}" (click)="closeMenu()"></div>
 </div>

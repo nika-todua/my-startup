@@ -68,19 +68,19 @@ export class HomepageComponent {
       title: 'პროექტის სახელი',
       tecnology: 'angular',
       image: 'https://img.freepik.com/premium-vector/project-management-word-concepts-dark-blue-banner_106317-28462.jpg',
-      link: ''
+      link: '/project1'
     },
     {
       title: 'პროექტის სახელი',
       tecnology: 'angular',
       image: 'https://img.freepik.com/premium-vector/project-management-word-concepts-dark-blue-banner_106317-28462.jpg',
-      link: ''
+      link: '/project2'
     },
     {
       title: 'პროექტის სახელი',
       tecnology: 'angular',
       image: 'https://img.freepik.com/premium-vector/project-management-word-concepts-dark-blue-banner_106317-28462.jpg',
-      link: ''
+      link: '/project3'
     }
   ]
 

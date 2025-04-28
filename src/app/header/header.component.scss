@@ -1,17 +1,192 @@
 .header_inner{
     width: 90%;
     height: 80px;
+
+    &_logo{
+        width: 65px;
+        height: auto;
+        z-index: 3;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    nav {
+        z-index: 9;
+        ul{
+            li{
+                a{
+                    font-size: 16px;
+                    font-weight: 800;
+                    color: #f0f0f0;
+                }
+            }
+        }
+    }
+    .toggle_btn{
+        z-index: 4;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &_line{
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            transition: all 0.2s linear;
+            &:nth-child(1){
+                transform: rotate(0deg);
+            }
+            &:nth-child(2){
+                transform: rotate(0deg);
+            }
+            &:nth-child(3){
+                transform: rotate(0deg);
+            }
+        }
+        &.active{
+            .toggle_btn_line{
+                &:nth-child(1){
+                    transform: translateY(15.4px) rotate(45deg);
+                }
+                &:nth-child(2){
+                    transform: rotate(0deg) scaleX(0);
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    transform: translateY(-15.6px) rotate(-45deg);
+                }
+            }
+        }
+    }
 }
-.header_inner .header_inner_logo{
-    width: 65px;
-    height: auto;
-}
-.header_inner .header_inner_logo img{
+.nav-blur{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 201ms linear, opacity 200ms linear;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
 }
-.header_inner nav ul li a{
-    font-size: 16px;
-    font-weight: 800;
-    color: #f0f0f0;
+@media screen and (max-width: 768px){
+    .header_inner{
+        width: 100%;
+        padding-inline: 15px;
+
+        &_logo{
+            width: 50px;
+            height: auto;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            min-width: 355px;
+            height: 100vh;
+            background-color: #0e0e0e;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.2s linear;
+            transform: translateX(385px);
+            
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                li{
+                    a{
+                        font-size: 20px;
+                        color: #f0f0f0;
+                    }
+                }
+            }
+            &.active{
+                transform: translateX(0px);
+            }
+        }
+        .toggle_btn{
+            z-index: 9;
+            display: flex;
+        }
+    }
+    .nav-blur{
+        display: block !important;
+    }
+}
+@media screen and (max-width: 480px){
+    .header_inner{
+
+        &_logo{
+            width: 50px;
+        }
+        nav {
+            width: 65%;
+            min-width: 235px;
+            
+            ul{
+                li{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    .header_inner{
+        nav {
+            width: 63%;
+            
+            ul{
+                li{
+                    a{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .header_inner{
+        &_logo{
+            width: 50px;
+            z-index: 10;
+        }
+        nav {
+            width: 100%;
+            min-width: 195px;
+            
+            ul{
+                gap: 17px;
+                li{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 }
